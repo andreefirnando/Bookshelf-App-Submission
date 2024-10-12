@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+/* Layout dasar */
+header {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6439ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 40px;
+  color: #6439ff;
+}
+
+h1 {
+  color: #f9f9f9;
+}
+
+h2 {
+  color: #6439ff;
+}
+
+/* Formulir */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #6439ff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6439ff;
+}
+
+/* Responsive Grid Layout untuk buku */
+#incompleteBookList,
+#completeBookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+[data-testid="bookItem"] {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+[data-testid="bookItem"] h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+[data-testid="bookItem"] p {
+  margin-bottom: 8px;
+}
+
+[data-testid="bookItem"] button {
+  background-color: #00ccdd;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+[data-testid="bookItem"] button:hover {
+  background-color: #6439ff;
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  [data-testid="bookItem"] h3 {
+    font-size: 1rem;
+  }
+
+  [data-testid="bookItem"] p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Responsiveness untuk layar sangat kecil */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  form div {
+    margin-bottom: 10px;
+  }
+
+  [data-testid="bookItem"] {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  [data-testid="bookItem"] h3 {
+    font-size: 0.9rem;
+  }
+
+  [data-testid="bookItem"] p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
